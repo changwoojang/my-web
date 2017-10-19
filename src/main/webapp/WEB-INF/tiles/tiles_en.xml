@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    
+    <!-- default -->
+    <definition name="default" template="/WEB-INF/views/template/default.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="description" value="" />
+		<put-attribute name="navbar" value="/WEB-INF/views/includes/navbar.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/includes/sidebar_en.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/includes/footer.jsp" />
+		<put-attribute name="main.js" value="../js/main" />
+		<put-attribute name="app.js" value="" />
+	</definition>
+    
+    <!-- home -->
+    <definition name="home" extends="default">
+        <put-attribute name="title" value="Home" />
+        <put-attribute name="description" value="Homepage" />
+        <put-attribute name="content" value="/WEB-INF/views/home/home.jsp" />
+        <put-attribute name="main.js" value="js/main" />
+        <put-attribute name="app.js" value="home/home.app" />
+    </definition>
+    
+   
+	
+    
+    
+    <!-- Promotion Pages -->
+    <definition name="promotion.template" extends="default">
+        <put-attribute name="title" value="IP Promotion" />
+        <put-attribute name="description" value="OTT Promotion" />
+        <put-attribute name="content" value="/WEB-INF/views/promotion/template_en.jsp" />
+        <put-attribute name="app.js" value="promotion/template/template.app" />
+    </definition>
+   
+    <definition name="promotion.product-option" extends="default">
+        <put-attribute name="title" value="Popular Search" />
+        <put-attribute name="description" value="Popular Search" />
+        <put-attribute name="content" value="/WEB-INF/views/promotion/popular-search_en.jsp" />
+        <put-attribute name="app.js" value="promotion/product-option/product-option.app" />
+    </definition>
+      <definition name="promotion.package-promotion" extends="default">
+        <put-attribute name="title" value="Package Promotion" />
+        <put-attribute name="description" value="Package Promotion" />
+        <put-attribute name="content" value="/WEB-INF/views/promotion/package-promotion_en.jsp" />
+        <put-attribute name="app.js" value="promotion/package-promotion/package-promotion.app" />
+    </definition>
+   
+    <definition name="promotion.loading" extends="default">
+        <put-attribute name="title" value="Subscription Channel Iframe" />
+        <put-attribute name="description" value="Iframe Menu" />
+        <put-attribute name="content" value="/WEB-INF/views/promotion/loading_en.jsp" />
+        <put-attribute name="app.js" value="promotion/iframe/iframe.app" />
+    </definition>
+    
+    
+    <!-- notice : usage-notice -->
+    <definition name="notice.usage-notice" extends="default">
+        <put-attribute name="title" value="Usage Announcement (User Guide)" />
+        <put-attribute name="description" value="" />
+        <put-attribute name="content" value="/WEB-INF/views/notice/usage-notice_en.jsp" />
+        <put-attribute name="app.js" value="notice/usage-notice/usage-notice.app" />
+    </definition>    
+    
+    <!-- notice : custom-notice -->
+    <definition name="notice.custom-notice" extends="default">
+        <put-attribute name="title" value="Custom Announcement" />
+        <put-attribute name="description" value="" />
+        <put-attribute name="content" value="/WEB-INF/views/notice/custom-notice_en.jsp" />
+        <put-attribute name="app.js" value="notice/custom-notice/custom-notice.app" />
+    </definition> 
+    
+	<!--   가입자 조회 page -->
+    <definition name="subscriber.subscriber" extends="default">
+        <put-attribute name="title" value="가입자 조회" />
+        <put-attribute name="description" value="게시판 템플릿" />
+        <put-attribute name="content" value="/WEB-INF/views/subscriber/subscriber.jsp" />
+        <put-attribute name="app.js" value="subscriber/subscriber/subscriber.app" />
+    </definition>
+    
+<!--     구매 내역 조회 page -->
+    <definition name="subscriber.purchase" extends="default">
+        <put-attribute name="title" value="구매내역 조회" />
+        <put-attribute name="description" value="게시판 템플릿" />
+        <put-attribute name="content" value="/WEB-INF/views/subscriber/purchase.jsp" />
+        <put-attribute name="app.js" value="subscriber/purchase/purchase.app" />
+    </definition> 
+    
+    <!-- 관리자 page -->
+    <definition name="management.admin" extends="default">
+        <put-attribute name="title" value="Administrator Information" />
+        <put-attribute name="description" value="Board Template" />
+        <put-attribute name="content" value="/WEB-INF/views/management/admin_en.jsp" />
+        <put-attribute name="app.js" value="management/admin/admin.app" />
+    </definition>
+    
+    <!-- 관리자 그룹 page -->
+    <definition name="management.authority" extends="default">
+        <put-attribute name="title" value="Administrator Permission Management" />
+        <put-attribute name="description" value="Board Template" />
+        <put-attribute name="content" value="/WEB-INF/views/management/authority_en.jsp" />
+        <put-attribute name="app.js" value="management/authority/authority.app" />
+    </definition>
+    
+      <!-- 입수현황 page -->
+<!-- <definition name="management.new" extends="default">
+        <put-attribute name="title" value="입수 현황" />
+        <put-attribute name="description" value="Board Template" />
+        <put-attribute name="content" value="/WEB-INF/views/management/new.jsp" />
+        <put-attribute name="app.js" value="management/new/new.app" />
+    </definition>
+      -->
+    <definition name="management.vod-status" extends="default">
+        <put-attribute name="title" value="VOD Linked Status" />
+        <put-attribute name="description" value="Board Template" />
+        <put-attribute name="content" value="/WEB-INF/views/management/vod-status_en.jsp" />
+        <put-attribute name="app.js" value="management/vod/vod-status.app" />
+    </definition>
+    
+    <definition name="management.sms-message" extends="default">
+    	<put-attribute name="title" value="SMS Message Template"/>
+    	<put-attribute name="description" value="Board Template"/>
+    	<put-attribute name="content" value="/WEB-INF/views/management/sms-message_en.jsp"/>
+    	<put-attribute name="app.js" value="management/sms-message/sms-message.app"/>
+    </definition>
+    
+    <definition name="blocked-ip.security" extends="default">
+        <put-attribute name="title" value="Blocked IP" />
+        <put-attribute name="description" value="Board Template" />
+        <put-attribute name="content" value="/WEB-INF/views/management/blocked-ip_en.jsp" />
+        <put-attribute name="app.js" value="management/blocked-ip/blocked-ip.app" />
+    </definition>
+    
+    <definition name="system.property" extends="default">
+        <put-attribute name="title" value="SDP Property" />
+        <put-attribute name="description" value="Board Template" />
+        <put-attribute name="content" value="/WEB-INF/views/management/property_en.jsp" />
+        <put-attribute name="app.js" value="management/property/property.app" />
+    </definition>    
+    
+    <definition name="app.security" extends="default">
+        <put-attribute name="title" value="App Security Property" />
+        <put-attribute name="description" value="Board Template" />
+        <put-attribute name="content" value="/WEB-INF/views/management/app-security_en.jsp" />
+        <put-attribute name="app.js" value="management/app-security/app-security.app" />
+    </definition>   
+      
+    <!-- 송출 Task page -->
+    <definition name="management.task" extends="default">
+        <put-attribute name="title" value="Transmission Status" />
+        <put-attribute name="description" value="Board Template" />
+        <put-attribute name="content" value="/WEB-INF/views/management/task_en.jsp" />
+        <put-attribute name="app.js" value="management/task/task.app" />
+    </definition>
+    
+    <definition name="management.job-task" extends="default">
+        <put-attribute name="title" value="Job Task History" />
+        <put-attribute name="description" value="Board Template" />
+        <put-attribute name="content" value="/WEB-INF/views/management/job-task_en.jsp" />
+        <put-attribute name="app.js" value="management/job-task/job-task.app" />
+    </definition>
+    
+    <!-- default -->
+    <definition name="error.access_denied" template="/WEB-INF/views/error/error.jsp">
+    	<put-attribute name="code" value="403" />
+		<put-attribute name="title" value="Access Denied" />
+		<put-attribute name="description" value="You don't have permission to access and request this resource." />
+	</definition>
+
+</tiles-definitions>

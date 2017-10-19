@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>jQuery Tree / Collapsible Menu Plugin - niceTree</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en" />
+
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<!-- WE NEED JQUERY -->
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+<!-- JQUERY UI ONLY NEEDED IF YOU USE ANIMATIONS -->
+
+<link type="text/css" rel="stylesheet" media="all"
+	href="./css/nicetree-style.css" />
+<!-- INCLUDE THE CSS -->
+<script type="text/javascript" src="./js/jquery-tree-1.0.min.js"></script>
+<!-- INCLUDE THE JAVASCRIPT -->
+<!-- CALL THE NICETREE PLUGIN -->
+<script type="text/javascript">
+	        $(document).ready(function() {
+		        $("#tree").niceTree();
+				$("#ajax-tree").niceTree();
+				$("#all-options-tree").niceTree({
+					animation: 'bounce',
+					animSpeed: 'slow',
+					ajaxId: 'nicetree-content',
+					ajaxLoadingText: 'Loading...',
+					ajaxOptions: {
+						type: 'POST',
+						cache: false
+					},
+					allowMultiple: true,
+					color: 'red',
+					ellipsis: false,
+					highlightNoMenu: false,
+					useCookies: true
+				});
+	        });
+	    </script>
+
+<!-- START CSS ONLY USED FOR EXAMPLE -->
+<style type="text/css">
+#wrapper {
+	padding: 50px
+}
+
+.container {
+	width: 900px;
+	margin-bottom: 50px;
+	height: 600px;
+	border: 1px solid #cecece
+}
+
+.menu {
+	float: left;
+	width: 200px;
+	height: 590px;
+	border-right: 1px solid #cecece;
+	padding-top: 10px
+}
+
+.content {
+	float: right;
+	padding: 20px;
+	width: 659px;
+	height: 600px;
+}
+</style>
+<!-- END CSS ONLY USED FOR EXAMPLE -->
+</head>
+<body>
+	<div id="wrapper">
+		<!-- BASIC EXAMPLE START -->
+		<div class="container">
+			<div class="menu">
+				<ul id="tree">
+					<li class="nt_open">
+						<!-- THE NT_OPEN CLASS WILL OPEN THIS MENU ON PAGE LOAD --> <a
+						href="#">Websites</a> <!-- THE HREF="#" SIGNALS A MENU -->
+						<ul>
+							<li class="nt_open">
+								<!-- THE NT_OPEN CLASS WILL OPEN THIS MENU ON PAGE LOAD --> <a
+								href="#">Selling</a> <!-- THE HREF="#" SIGNALS A MENU -->
+								<ul>
+									<li><a href="http://www.ebay.com/">Ebay</a></li>
+									<li><a href="http://www.glyde.com/">Glyde</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Buying</a> <!-- THE HREF="#" SIGNALS A MENU -->
+								<ul>
+									<li><a href="http://www.amazon.com/">Amazon</a></li>
+									<li><a href="http://www.walmart.com/">Walmart</a></li>
+								</ul></li>
+						</ul>
+					</li>
+					<li><a href="http://www.arrowchat.com/">ArrowChat Site</a></li>
+				</ul>
+			</div>
+			<div class="content">Example page content goes here.</div>
+		</div>
+		<!-- BASIC EXAMPLE END -->
+
+		<!-- AJAX EXAMPLE START -->
+		<div class="container">
+			<div class="menu">
+				<ul id="ajax-tree">
+					<li><a href="#">Menu</a> <!-- THE HREF="#" SIGNALS A MENU -->
+						<ul>
+							<li><a rel="nicetree-ajax" href="./example-pages/1.html">Example
+									One</a> <!-- THE REL="NICETREE-AJAX" SIGNALS AJAX --></li>
+							<li><a rel="nicetree-ajax" href="./example-pages/2.html">Example
+									Two</a> <!-- THE REL="NICETREE-AJAX" SIGNALS AJAX --></li>
+						</ul></li>
+					<li><a rel="nicetree-ajax" href="./example-pages/3.html">Example
+							Three</a> <!-- THE REL="NICETREE-AJAX" SIGNALS AJAX --></li>
+				</ul>
+			</div>
+			<div class="content" id="nicetree-content">
+				<!-- THE ID="NICETREE-CONTENT" IS WHERE THE LOADED AJAX GOES -->
+				Example page content goes here.
+			</div>
+		</div>
+		<!-- AJAX EXAMPLE END -->
+
+		<!-- ALL OPTIONS EXAMPLE START -->
+		<div class="container">
+			<div class="menu">
+				<ul id="all-options-tree">
+					<li><a href="#">Menu</a> <!-- THE HREF="#" SIGNALS A MENU -->
+						<ul>
+							<li><a href="./example-pages/1.html">Example One</a></li>
+							<li><a href="./example-pages/2.html">Example Two</a></li>
+						</ul></li>
+					<li><a href="./example-pages/3.html">Example Three</a></li>
+				</ul>
+			</div>
+			<div class="content">Example page content goes here.</div>
+		</div>
+		<!-- ALL OPTIONS EXAMPLE END -->
+	</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
+
+	<!-- Scans the classpath of this application for @Components to deploy as beans -->
+    <context:component-scan base-package="com.lf.admin.service"/>
+    
+    <context:component-scan base-package="com.lf.admin.filter"/>
+    <context:component-scan base-package="com.lf.admin.util"/>
+    
+    <bean id="encoder" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder"/>
+	
+	<bean id="handlerExceptionResolver" class="com.lf.admin.handler.RestHandlerExceptionResolver">
+    	<property name="restErrorResolver" ref="restErrorResolver" />
+    </bean>
+    
+    <bean id="restErrorResolver" class="com.lf.admin.handler.DefaultRestErrorResolver">
+    	<!-- <property name="messageSource" ref="messageSource" />   -->
+    </bean>
+    
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+    	<property name="basenames">
+    		<list>
+	    		<value>classpath:messages</value>
+    			<value>classpath:exception-messages</value>
+    		</list>
+    	</property> 
+    	<property name="defaultEncoding" value="UTF-8"/>
+	</bean>
+	
+	<!-- acms properties -->
+<!-- 	<context:property-placeholder
+		location="classpath:acms-default.properties,file:${app.home}/conf/acms.properties"
+		file-encoding="utf-8"
+		ignore-resource-not-found="true"
+		ignore-unresolvable="true" /> -->
+		
+	<!-- admin properties -->
+	<context:property-placeholder
+		location="classpath:admin-default.properties,file:${app.home}/conf/admin.properties"
+		file-encoding="utf-8"
+		ignore-resource-not-found="true"
+		ignore-unresolvable="true" />
+    
+    
+    
+    <bean id="refererFilter" class="com.lf.admin.filter.RefererFilter">
+
+	</bean>
+    
+    
+	<!-- Search : myBatis -->
+	<!-- <jee:jndi-lookup id="searchDS" jndi-name="java:comp/env/jdbc/search" resource-ref="true"/>
+	
+	<bean id="sqlSessionFactory" primary="true" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation" value="classpath:mybatis-configuration.xml" />
+		<property name="dataSource" ref="searchDS" />
+		<property name="transactionFactory">
+			<bean class="org.apache.ibatis.transaction.managed.ManagedTransactionFactory" />
+		</property>
+	</bean>
+	
+	<context:component-scan base-package="com.lf.admin.admin.dao" /> -->
+	
+	<!-- AppStore -->
+	<!-- App Store Client -->
+	<!-- <bean id="appStoreRestClient" class="com.lf.admin.admin.appStore.AppStoreRestClient">
+		<property name="contextUrl" value="${app.store.url}" />
+		<property name="serviceUrlMappings">
+			<map>
+				<entry key="app_list" value="/promotion/list/type/ALL/from/{from}/to/{to}/mso/{mso}" />
+				<entry key="app_search" value="/promotion/list/type/{type}/search/{search}/from/{from}/to/{to}/mso/{mso}" />
+				<entry key="app_detail" value="/promotion/detail/id/{id}/mso/{mso}" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+		<property name="messageConverters">
+			<list>
+				<bean class="org.springframework.http.converter.FormHttpMessageConverter" />
+				<bean class="org.springframework.http.converter.StringHttpMessageConverter" />
+				<bean class="com.lf.admin.admin.appStore.JsonHttpMessageConverter">
+					<property name="failOnUnknownProperties" value="false" />
+				</bean>
+			</list>
+		</property>
+		<property name="requestFactory">
+			<bean class="org.springframework.http.client.BufferingClientHttpRequestFactory">
+				<constructor-arg>
+					<bean class="org.springframework.http.client.HttpComponentsClientHttpRequestFactory">
+						<constructor-arg>
+							<bean class="com.lf.admin.admin.appStore.HttpClientFactory">
+								<property name="maxTotalConnections" value="${http.max_total_connections}" />
+								<property name="maxConnectionsPerRoute" value="${http.max_connections_per_route}" />
+								<property name="connectTimeout" value="${http.connect_timeout}" />
+								<property name="readTimeout" value="${http.read_timeout}" />
+								<property name="maxKeepAliveTimeout" value="${http.max_keepalive_timeout}" />
+							</bean>
+						</constructor-arg>
+					</bean>
+				</constructor-arg>
+			</bean>
+		</property>
+	</bean> -->
+    
+</beans>

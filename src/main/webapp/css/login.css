@@ -1,0 +1,64 @@
+/*------------------------------------------------*/
+/*	Login Page
+/*------------------------------------------------*/
+ .page-login .inner-page {
+    padding-top: 10%;
+    margin-bottom: 50px;
+}
+.page-login .logo {
+    margin-bottom: 20px;
+}
+.page-login .login-box {
+    width: 100%;
+    padding: 25px;
+    text-align: left;
+    background-color: #f1f1f1;
+    /* border: 1px solid #948d81; */
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+.page-login .login-box .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+.page-login .login-box .btn-login {
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+@media screen and (min-width: 768px) {
+    .page-login .login-box {
+        width: 75%;
+    }
+}
+@media screen and (min-width: 992px) {
+    .page-login .login-box {
+        width: 50%;
+    }
+}
+.page-login .links {
+    text-align: center;
+}
+.page-login .links p {
+    margin-bottom: 0;
+    font-size: 0.9em;
+}
+.page-login .links p a:hover {
+    text-decoration: none;
+}
+/*------------------------------------------------*/
+/*	Login Validation
+/*------------------------------------------------*/
+ #form-error {
+    display: none;
+}
+#form-error label {
+    font-size: 12px;
+    font-weight: bold
+}
+#login-error label {
+    font-size: 12px;
+    font-weight: bold
+}

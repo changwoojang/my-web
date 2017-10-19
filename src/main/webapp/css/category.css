@@ -1,0 +1,92 @@
+@CHARSET "UTF-8";
+
+/*------------------------------------------------*/
+/*	CUG 페이지에서 사용. vod group화면에서 사용 
+/*------------------------------------------------*/
+.side {
+	width : 200px;
+	float: left;
+}
+
+.side .item {
+	height: 540px;
+	background-color: #fff;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.side .item a{
+	display: block;
+	padding: 8px 10px;
+	margin-bottom: -1px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	margin-left: -1px;
+	margin-right: -1px; 
+	margin-top: -1px;
+	color: #7c7569;
+}
+
+.side .item a:hover {
+	border-color: #e8e6de;
+	background-color: #e8e6de;
+	color: #ac0a18;
+	text-decoration: none;
+}
+
+.side .item a.selected {
+	border-color: #e8e6de;
+	background-color: #e8e6de;
+	color: #ac0a18;
+	text-decoration: none;
+}
+
+.panel {
+	height: 100%;
+	background-color: #fff;
+	overflow: auto;
+	overflow-x: hidden;
+	min-width: 140px;
+	max-width: 270px; 
+	border: 2px solid #dddddd;
+	/* margin: -10px; */
+}
+
+.panel a {
+	display: block;
+	padding: 8px 10px;
+	margin-bottom: -1px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	margin-left: -1px;
+	margin-right: -1px; 
+	margin-top: -1px;
+	color: #7c7569;
+}
+
+.panel a:hover {
+	border-color: #e8e6de;
+	background-color: #e8e6de;
+	color: #ac0a18;
+	text-decoration: none;
+}
+
+.panel-container {
+	height: 500px;
+	position: relative;
+	float: left;
+	padding-left: 8px;
+	padding-right: 8px;
+	width: 20%;
+}
+
+.list-item.marked {
+	background-color: #D5E7FF;
+}
+
+/* .panel .active-item {
+	border-color: #e8e6de;
+	background-color: #e8e6de;
+	color: #ac0a18;
+	text-decoration: none;
+} */

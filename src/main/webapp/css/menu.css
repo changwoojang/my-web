@@ -1,0 +1,31 @@
+@CHARSET "EUC-KR";
+/*------------------------------------------------*/
+/*	메뉴 관리 - 메뉴 구성 화면에서 사용
+/*------------------------------------------------*/
+.btn-group.fill {
+	width: 100%;
+}
+
+.btn-group.fill>.btn-item {
+	width: 90%;
+}
+
+.btn-group.fill>.dropdown-toggle {
+	width: 10%;
+}
+
+#menu-structure {
+	margin-top: 10px;
+}
+
+#version-list {
+	margin-top: 5px;
+}
+
+.dropdown-menu.fill{
+	width: 90%;
+}
+
+form select.form-control {
+	width: 100%;
+}

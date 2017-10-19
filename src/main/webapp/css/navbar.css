@@ -1,0 +1,103 @@
+/*------------------------------------------------*/
+/*	Navbar
+/*------------------------------------------------*/
+.top-bar {
+	padding: 5px;
+	background-color: #555555;
+}
+
+.top-bar .logo {
+	font-size: 18px;
+	font-weight: 700;
+	text-decoration: none;
+	color: #fff;
+}
+
+.top-bar .top-bar-right {
+	text-align: right;
+	padding-right: 15px;
+}
+
+.top-bar .top-bar-right .btn-link {
+	color: #ddd;
+}
+
+.top-bar .top-bar-right .btn-link:hover {
+	color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+	.top-bar .top-bar-right {
+		float: right;
+		position: relative;
+		top: 2px;
+	}
+}
+
+.top-bar .logged-user {
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	*vertical-align: auto;
+	zoom: 1;
+	*display: inline;
+	text-align: left;
+	padding-top: 5px;
+}
+
+.top-bar .dropdown-menu {
+	padding: 0;
+}
+
+.top-bar .dropdown-menu>li>a {
+	padding: 8px;
+}
+
+.top-bar .dropdown-menu>li>a:hover {
+	background-color: #fafafa;
+}
+
+.top-bar .logged-user .btn {
+	padding: 0;
+	border: none;
+	font-size: 0.9em;
+	font-weight: 700;
+	text-decoration: none;
+	color: #fff;
+}
+
+.top-bar .logged-user .btn .name {
+	font-weight: 400;
+}
+
+.top-bar .logged-user .btn .caret {
+	border-top-color: #fff;
+}
+
+.top-bar .logged-user .btn:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.top-bar .logged-user .open .btn {
+	color: #fff;
+}
+
+.top-bar .logged-user .dropdown-menu {
+	right: -15px;
+	top: 35px;
+	padding: 0;
+}
+
+.top-bar .logged-user .dropdown-menu>li {
+	border-top: 1px solid #f1f1f1;
+}
+
+.top-bar .logged-user .dropdown-menu>li:first-child {
+	border-top: none;
+}
+
+.top-bar .logged-user .dropdown-menu>li>a {
+	color: #555;
+	font-size: 0.9em;
+}
