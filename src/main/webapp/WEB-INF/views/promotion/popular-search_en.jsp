@@ -17,14 +17,16 @@
                 </div>
            
 	            <div class="widget-content" style="height: 585px; min-width: 600px;">
-					<div class="col-md-4">
+					<div class="col-md-5">
 						<form class="form-horizontal" id="search-recommend-info" >
 							<div class="form-group">
 								<div id="search-recommend-list-body"></div>
 							</div>
 						</form> 
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-1"></div>
+
+					<div class="col-md-5">
 						<form class="form-horizontal">
 							<div class="form-group">
 								<div id="product-option-list-body"></div>
