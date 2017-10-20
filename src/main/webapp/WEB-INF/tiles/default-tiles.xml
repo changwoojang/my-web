@@ -1,39 +1,39 @@
-<!-- <?xml version="1.0" encoding="UTF-8" ?>
+ <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE tiles-definitions PUBLIC
 "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-    
-    default
-    <definition name="default" template="/WEB-INF/views/template/default.jsp">
-		<put-attribute name="title" value="" />
-		<put-attribute name="description" value="" />
-		<put-attribute name="navbar" value="/WEB-INF/views/includes/navbar.jsp" />
-		<put-attribute name="sidebar" value="/WEB-INF/views/includes/sidebar.jsp" />
-		<put-attribute name="content" value="" />
-		<put-attribute name="footer" value="/WEB-INF/views/includes/footer.jsp" />
-		<put-attribute name="main.js" value="../js/main" />
-		<put-attribute name="app.js" value="" />
-	</definition>
-    
-    home
-    <definition name="home" extends="default">
-        <put-attribute name="title" value="Home" />
-        <put-attribute name="description" value="홈페이지" />
-        <put-attribute name="content" value="/WEB-INF/views/home/home.jsp" />
-        <put-attribute name="main.js" value="js/main" />
-        <put-attribute name="app.js" value="home/home.app" />
-    </definition>
-    
-   
-   
+
+    <!--&lt;!&ndash;default&ndash;&gt;-->
+    <!--<definition name="default" template="/WEB-INF/views/template/default.jsp">-->
+		<!--<put-attribute name="title" value="" />-->
+		<!--<put-attribute name="description" value="" />-->
+		<!--<put-attribute name="navbar" value="/WEB-INF/views/includes/navbar.jsp" />-->
+		<!--<put-attribute name="sidebar" value="/WEB-INF/views/includes/sidebar.jsp" />-->
+		<!--<put-attribute name="content" value="" />-->
+		<!--<put-attribute name="footer" value="/WEB-INF/views/includes/footer.jsp" />-->
+		<!--<put-attribute name="main.js" value="../js/main" />-->
+		<!--<put-attribute name="app.js" value="" />-->
+	<!--</definition>-->
+
+    <!--&lt;!&ndash;home&ndash;&gt;-->
+    <!--<definition name="home" extends="default">-->
+        <!--<put-attribute name="title" value="Home" />-->
+        <!--<put-attribute name="description" value="홈페이지" />-->
+        <!--<put-attribute name="content" value="/WEB-INF/views/home/home.jsp" />-->
+        <!--<put-attribute name="main.js" value="js/main" />-->
+        <!--<put-attribute name="app.js" value="home/home.app" />-->
+    <!--</definition>-->
+
+
+<!--
     <definition name="promotion.package-promotion" extends="default">
         <put-attribute name="title" value="패키지 프로모션" />
         <put-attribute name="description" value="" />
         <put-attribute name="content" value="/WEB-INF/views/promotion/package-promotion.jsp" />
         <put-attribute name="app.js" value="promotion/package-promotion/package-promotion.app" />
     </definition>
-    
+
     <definition name="promotion.banner-promotion" extends="default">
         <put-attribute name="title" value="배너 프로모션" />
         <put-attribute name="description" value="" />
@@ -52,14 +52,14 @@
         <put-attribute name="content" value="/WEB-INF/views/promotion/iframe.jsp" />
         <put-attribute name="app.js" value="promotion/iframe/iframe.app" />
     </definition>
-    
+
     <definition name="promotion.loading" extends="default">
         <put-attribute name="title" value="데이터방송 로딩바킹" />
         <put-attribute name="description" value="App 로딩 바킹 관리" />
         <put-attribute name="content" value="/WEB-INF/views/promotion/loading.jsp" />
         <put-attribute name="app.js" value="promotion/loading/loading.app" />
     </definition>
-    
+
     <definition name="promotion.price" extends="default">
         <put-attribute name="title" value="가격 프로모션" />
         <put-attribute name="description" value="" />
@@ -67,7 +67,7 @@
         <put-attribute name="app.js" value="promotion/price/price.app" />
     </definition>
     End of Promotion
-    
+
     notice : total-notice
     <definition name="notice.total-notice" extends="default">
         <put-attribute name="title" value="전체 공지사항" />
@@ -75,7 +75,7 @@
         <put-attribute name="content" value="/WEB-INF/views/notice/total-notice.jsp" />
         <put-attribute name="app.js" value="notice/total-notice/total-notice.app" />
     </definition>
-    
+
     notice : general-notice
     <definition name="notice.general-notice" extends="default">
         <put-attribute name="title" value="일반 공지사항" />
@@ -83,7 +83,7 @@
         <put-attribute name="content" value="/WEB-INF/views/notice/general-notice.jsp" />
         <put-attribute name="app.js" value="notice/general-notice/general-notice.app" />
     </definition>
-    
+
     notice : channel-notice
     <definition name="notice.channel-notice" extends="default">
         <put-attribute name="title" value="채널 공지사항" />
@@ -91,7 +91,7 @@
         <put-attribute name="content" value="/WEB-INF/views/notice/channel-notice.jsp" />
         <put-attribute name="app.js" value="notice/channel-notice/channel-notice.app" />
     </definition>
-    
+
     notice : event-notice
     <definition name="notice.event-notice" extends="default">
         <put-attribute name="title" value="이벤트 공지사항" />
@@ -99,7 +99,7 @@
         <put-attribute name="content" value="/WEB-INF/views/notice/event-notice.jsp" />
         <put-attribute name="app.js" value="notice/event-notice/event-notice.app" />
     </definition>
-    
+
     가입자 조회 page
     <definition name="subscriber.subscriber" extends="default">
         <put-attribute name="title" value="가입자 조회" />
@@ -107,7 +107,7 @@
         <put-attribute name="content" value="/WEB-INF/views/subscriber/subscriber.jsp" />
         <put-attribute name="app.js" value="subscriber/subscriber/subscriber.app" />
     </definition>
-    
+
     구매 내역 조회 page
     <definition name="subscriber.purchase" extends="default">
         <put-attribute name="title" value="구매내역 조회" />
@@ -115,7 +115,7 @@
         <put-attribute name="content" value="/WEB-INF/views/subscriber/purchase.jsp" />
         <put-attribute name="app.js" value="subscriber/purchase/purchase.app" />
     </definition>
-    
+
     관리자 page
     <definition name="management.admin" extends="default">
         <put-attribute name="title" value="관리자 정보" />
@@ -123,7 +123,7 @@
         <put-attribute name="content" value="/WEB-INF/views/management/admin.jsp" />
         <put-attribute name="app.js" value="management/admin/admin.app" />
     </definition>
-    
+
     관리자 그룹 page
     <definition name="management.authority" extends="default">
         <put-attribute name="title" value="관리자 권한 관리" />
@@ -131,7 +131,7 @@
         <put-attribute name="content" value="/WEB-INF/views/management/authority.jsp" />
         <put-attribute name="app.js" value="management/authority/authority.app" />
     </definition>
-    
+
     입수현황 page
     <definition name="management.new" extends="default">
         <put-attribute name="title" value="입수 현황" />
@@ -139,13 +139,13 @@
         <put-attribute name="content" value="/WEB-INF/views/management/new.jsp" />
         <put-attribute name="app.js" value="management/new/new.app" />
     </definition>
-    
+
     송출 Task page
     <definition name="management.task" extends="default">
         <put-attribute name="title" value="송출 Task" />
         <put-attribute name="description" value="" />
         <put-attribute name="content" value="/WEB-INF/views/management/task.jsp" />
         <put-attribute name="app.js" value="management/task/task.app" />
-    </definition>
+    </definition>-->
 
-</tiles-definitions> -->
+</tiles-definitions>
