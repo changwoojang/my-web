@@ -2,7 +2,7 @@ package com.lf.admin.filter;
  
 import java.io.IOException;
 
-import nl.captcha.Captcha;
+/*import nl.captcha.Captcha;*/
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -47,8 +47,8 @@
          <authentication-provider>
 			<password-encoder hash="sha"/>
 			<user-service>
-                <user name="changwoo" password="0afc3727c9731dace854a86f436379c44ba81b9e" authorities="ROLE_ADMIN"/>
-                <!--<user name="admin" password="d5a2f1b7f0636bf2eb24cdab3cac134c3a45aa69" authorities="ROLE_ADMIN, ROLE_USER"/>-->
+                <!--<user name="changwoo" password="0afc3727c9731dace854a86f436379c44ba81b9e" authorities="ROLE_ADMIN"/>-->
+                <user name="admin" password="d5a2f1b7f0636bf2eb24cdab3cac134c3a45aa69" authorities="ROLE_ADMIN, ROLE_USER"/>
             </user-service>
         </authentication-provider>
       <!--   <authentication-provider user-service-ref="userSecurityService">

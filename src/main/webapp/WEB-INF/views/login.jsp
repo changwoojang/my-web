@@ -1,6 +1,6 @@
 <%@ page language="java" pageEncoding="utf-8" contentType="text/html;charset=utf-8"%>
 <%@ include file="./includes/taglibs.jsp"%>
-<%@page import="nl.captcha.Captcha"%>
+<%--<%@page import="nl.captcha.Captcha"%>--%>
 <%
     String ctx = request.getContextPath();   //콘텍스트명 얻어오기.    
 %>
@@ -69,7 +69,7 @@
 								</div>
 							</div>
 
-							<img style="width: 100%" src="<%=ctx%>/captcha"><br /> 
+							<%--<img style="width: 100%" src="<%=ctx%>/captcha"><br />
 
 							<div class="form-group">
 								<div class="col-sm-12">
@@ -78,6 +78,7 @@
 							    	</div>
 							    </div>
 							</div>
+							--%>
 							<!-- reCaptcha function -->
 							<!-- <div id="html_element"></div> -->
 							<button class="btn btn-default btn-block btn-login">
