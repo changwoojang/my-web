@@ -25,7 +25,7 @@
 	<div class="wrapper full-page-wrapper page-login text-center">
 		<div class="inner-page">
 			<div class="login-box center-block">
-				<p class="title">LF Product Management</p>
+				<p class="title">My Web Page</p>
 				<hr/>
 				<div class="row">
 					<div class="col-md-6">
